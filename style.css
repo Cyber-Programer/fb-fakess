@@ -1,0 +1,353 @@
+:root{
+    --messanger-color: #0062ff;
+    --me-color: #0084ff;
+    --you-color: #e0e0e0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+                                /* RAPER */
+
+.raper{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: rgb(238, 228, 228);
+    position: relative;
+}
+
+                                /* MAIN */
+
+.main{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+                            /* ANDROID */
+
+.android{
+    position: absolute;
+    top: 5%;
+    height: 600px;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 235, 235);
+    /* margin: 0; */
+}
+
+                            /* ANDROID | SIGNEL */
+
+.signel{
+    /* position: absolute; */
+    height: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    margin-bottom: 5%;
+}
+
+.signel-part-2 > p{
+    font-size: 15px;
+    margin-top: 3px;
+    width: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signel .signel-part-3 > .fa-bell-slash{
+    font-size: 12px;
+}
+
+.signel .signel-part-3 > .bettery{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.signel .fa-wifi{
+    margin-left: 2px;
+    font-size: 13px;
+    /* font-weight: 600; */
+}
+
+
+.android #signal1{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+
+.fa-solid{
+    font-size: 10px;
+}
+
+
+@media (max-width:700px) {
+    .android{
+        top: 1%;
+        height: 500px;
+        width: 300px;
+    }
+}
+
+                            /* Messanger  */
+.messanger{
+    position: relative;
+}
+
+.messanger .nav{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.messanger .nav .fa-arrow-left{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--messanger-color) ;
+    /* color:  #43609C; */
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    /* margin-top: 2%; */
+}
+
+.nav .img {
+    position: relative;
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.nav .img img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: cover;
+    object-fit: cover;
+    transform: scale(1.2);
+    /* border: 2px solid gray; */
+}
+
+.nav .img::after {
+    content: '';
+    position: absolute;
+    width: 40px; /* Adjust the size of the border */
+    height: 40px; /* Adjust the size of the border */
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid gray;
+    box-sizing: border-box;
+}
+
+.nav .name{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* align-items: center; */
+    justify-content: center;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.name h4{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.name p{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: 500;
+}
+
+.nav .calls{
+    position: absolute;
+    right: 5%;
+    margin-top: 5%;
+}
+
+.calls .fa-solid{
+    font-size: 15px;
+    color: var(--messanger-color);
+}
+
+.calls .fa-video{
+    padding-left: 15px;
+}
+
+                                        /* MESSAGES */
+
+.messages{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.me, .you {
+    max-width: 70%;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    /* background-color: white; */
+}
+
+[contenteditable="true"] {
+    outline: none;
+}
+
+.me {
+    align-self: flex-end;
+    background-color: var(--me-color);
+    color: #fff;
+    margin-left: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.you {
+    align-self: flex-start;
+    background-color: var(--you-color);
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+p {
+    margin: 0;
+}
+
+
+                                /* BUTTONS */
+
+.btns{
+    align-self: flex-start;
+    display: flex;
+    position:absolute;
+    bottom: -10%;
+    left: 0;
+    display: block;
+}
+
+.btns .msgBtn{
+    /* display: block; */
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #f1b431;
+    bottom: 0;
+    -webkit-tap-highlight-color: transparent;
+    /* outline: 0; */
+}
+
+.imgUpload{
+    align-self: flex-start;
+    display: flex;
+    position:absolute;
+    bottom: -9%;
+    right: -10%;
+    width: 50%;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    position: absolute;
+    background-color:#f1b431 ;
+    outline: none;
+    border: 1px  solid black;
+    left: -15%;
+    bottom: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button:focus{
+    box-shadow: 0 2px 2px black;
+}
+
+.imgUpload #upload{
+    position: absolute;
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f1b431;
+    bottom: 0;
+    -webkit-tap-highlight-color: transparent;
+    right: 10%;
+}
+
+.footer{
+    align-self: flex-start;
+    display: flex;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.ico{
+    margin-left: 10px;
+}
+
+.ico img{
+    width: 20px;
+    height:20px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.ico > .fa-solid{
+    font-size: 20px;
+    color: var(--messanger-color);
+    /* margin-left: 10px; */
+    margin-right: 5px;
+    /* margin-bottom: 5px; */
+}
+
+.ico > .fa-regular{
+    font-size: 20px;
+    color: var(--messanger-color);
+
+    margin-right: 10px;
+}
+
+.ico input{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #e6e1e1;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.ico input::placeholder{
+    padding-left: 5px;
+}
+
+.ico p{
+    position: absolute;
+    /* display: flex; */
+    bottom: 1%;
+    right: 3%;
+    font-size: 20px;
+    color: var(--me-color);
+}
